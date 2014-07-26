@@ -1,0 +1,4 @@
+LANG={{locale}}
+LANGUAGE={{locale}}
+LC_ALL={{locale}}
+LC_CTYPE={{locale}}

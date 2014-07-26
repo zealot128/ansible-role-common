@@ -1,0 +1,53 @@
+---
+disable_password_authentication: true
+locale: de_DE.UTF-8
+unattended_upgrades: true
+default_packages:
+  - acl
+  - apt-transport-https
+  - attr
+  - bash-completion
+  - build-essential
+  - command-not-found
+  - curl
+  - dnsutils
+  - fail2ban
+  - git-core
+  - htop
+  - htop
+  - iftop
+  - iotop
+  - liblzma-dev
+  - libpcre3-dev
+  - lsof
+  - ltrace
+  - mosh
+  - nano
+  - nmap
+  - openssl
+  - pkg-config
+  - realpath
+  - smartmontools
+  - sslscan
+  - strace
+  - sudo
+  - sysstat
+  - tmux
+  - vim
+  - zlib1g-dev
+
+fail2ban_services:
+  - name: ssh
+    enabled: true
+    port: ssh
+    filter: sshd
+    logpath: /var/log/auth.log
+    maxretry: 6
+    banaction: "iptables-multiport"
+
+  - name: ssh-ddos
+    enabled: true
+    port: ssh
+    filter: ssh-ddos
+    logpath: /var/log/auth.log
+    maxretry: 6

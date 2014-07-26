@@ -1,0 +1,5 @@
+dependencies:
+- role: mivok0.users
+  users_create_per_user_group: true
+  users_create_homedirs: true
+- role: Ansibles.fail2ban

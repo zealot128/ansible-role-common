@@ -1,0 +1,34 @@
+[sasl]
+enabled  = true
+port     = smtp
+filter   = sasl
+logpath  = /var/log/mail.log
+maxretry = 10
+
+[courierpop3]
+enabled  = true
+port     = pop3
+filter   = courierpop3
+logpath  = /var/log/mail.log
+maxretry = 10
+
+[courierpop3s]
+enabled  = true
+port     = pop3s
+filter   = courierpop3s
+logpath  = /var/log/mail.log
+maxretry = 10
+
+[courierimap]
+enabled  = true
+port     = imap2
+filter   = courierimap
+logpath  = /var/log/mail.log
+maxretry = 10
+
+[courierimaps]
+enabled  = true
+port     = imaps
+filter   = courierimaps
+logpath  = /var/log/mail.log
+maxretry = 10

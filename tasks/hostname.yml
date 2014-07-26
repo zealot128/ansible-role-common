@@ -1,0 +1,8 @@
+---
+- name: Set the hostname in rc.conf
+  lineinfile: dest=/etc/rc.conf regexp="^hostname" line='hostname="{{ hostname }}"'
+  register: hostname
+
+- name: Set the hostname
+  shell: hostname {{ hostname }}
+  when: hostname.changed
